@@ -19,20 +19,19 @@
     <!-- MVC注解映射的支持 -->
     <mvc:annotation-driven/>
 
-    <!-- 使用thymeleaf解析 -->
     <bean id="templateResolver" class="org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver">
         <property name="prefix" value="classpath:template/"/>
         <property name="suffix" value=".html"/>
+        <property name="templateMode" value="HTML5"/>
         <property name="characterEncoding" value="UTF-8"/>
-        <property name="templateMode" value="HTML"/>
         <property name="cacheable" value="false"/>
     </bean>
 
     <bean id="layoutDialect" class="nz.net.ultraq.thymeleaf.LayoutDialect"/>
     <bean id="templateEngine" class="org.thymeleaf.spring4.SpringTemplateEngine">
         <property name="templateResolver" ref="templateResolver"/>
+        <property name="additionalDialects" ref="layoutDialect"/>
         <property name="enableSpringELCompiler" value="true"/>
-        <property name="dialect" ref="layoutDialect"/>
     </bean>
 
     <bean class="org.thymeleaf.spring4.view.ThymeleafViewResolver">

@@ -1,5 +1,6 @@
 package com.diyiliu.controller;
 
+import nz.net.ultraq.thymeleaf.LayoutDialect;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,6 +24,8 @@ public class HomeController {
 
     @RequestMapping("/search")
     public String search(){
+
+        new LayoutDialect();
 
         return "search";
     }

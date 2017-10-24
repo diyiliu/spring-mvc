@@ -16,13 +16,12 @@ ext {
 }
 
 dependencies {
-
     compile group: 'org.springframework', name: 'spring-beans', version: "$springVersion"
     compile group: 'org.springframework', name: 'spring-webmvc', version: "$springVersion"
     compile group: 'org.springframework', name: 'spring-context', version: "$springVersion"
     compile group: 'org.springframework', name: 'spring-context-support', version: "$springVersion"
 
-    compile group: 'org.thymeleaf', name: 'thymeleaf-spring4', version: '3.0.5.RELEASE'
+    compile group: 'org.thymeleaf', name: 'thymeleaf-spring4', version: '3.0.0.RELEASE'
     compile group: 'nz.net.ultraq.thymeleaf', name: 'thymeleaf-layout-dialect', version: '2.2.2'
 
     compile group: 'org.webjars', name: 'jquery', version: '3.2.1'
